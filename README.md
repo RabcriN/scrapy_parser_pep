@@ -33,8 +33,7 @@ python -m pip install --upgrade pip
 ```
 pip install -r requirements.txt
 ```
-
-# Для запуска парсера введите:
+### Для запуска парсера введите:
 ```
 scrapy crawl pep
 ```
