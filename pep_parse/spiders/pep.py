@@ -1,12 +1,15 @@
+from urllib.parse import urlparse
+
 import scrapy
 
+from pep_parse.constants import START_URLS
 from pep_parse.items import PepParseItem
 
 
 class PepSpider(scrapy.Spider):
     name = 'pep'
-    allowed_domains = ['peps.python.org']
-    start_urls = ['https://peps.python.org/']
+    allowed_domains = [urlparse(*START_URLS).netloc]
+    start_urls = START_URLS
 
     def parse(self, response):
         all_peps = response.css(

@@ -1,7 +1,7 @@
 import csv
 from collections import defaultdict
 
-from .constants import DATETIME, BASE_DIR
+from .constants import BASE_DIR, DATETIME
 
 
 class PepParsePipeline:
